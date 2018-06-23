@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:9.4-slim
 ENV NOTVISIBLE "in users profile"
 RUN apt-get update &&\
     apt-get install -y openssh-server &&\
