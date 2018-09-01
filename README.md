@@ -3,29 +3,29 @@ SSHd Docker image
 
 ## Usage:
 
-On PC 1:
+On remote machine:
 ```
 docker run -d -p 8022:22 giabar/gb-sshd
 ```
 
-On PC 2:
+On your machine:
 ```
-ssh -p 8022 tempuser@computer1
+ssh -p 8022 tempuser@remotemachine
 ```
 Password: passw0rd12
 
 
 ## Use this image with root account
 
-On PC 1:
+On remote machine:
 ```
 docker build -f Dockerfile.withroot -t giabar/gb-sshd-root .
 
 docker run -d -p 8022:22 giabar/gb-sshd-root
 ```
 
-On PC 2:
+On your machine:
 ```
-ssh -p 8022 root@computer1
+ssh -p 8022 root@remotemachine
 ```
 Password: passw0rd12
